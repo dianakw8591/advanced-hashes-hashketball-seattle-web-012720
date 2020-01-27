@@ -183,7 +183,7 @@ end
 
 def player_with_longest_name
   #return the player with the longest name
-
+  player_array.max_by {|player_hash| player_hash[:player_name].length}[:player_name]
 end
 
 def long_name_steals_a_ton?
