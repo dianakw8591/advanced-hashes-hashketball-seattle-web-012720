@@ -134,7 +134,8 @@ end
 
 def team_colors(team)
   #returns the team colors of a given team
-  game_hash.find {|(side, info_hash)| info_hash[:team_name] == team}[:colors]
+  team_hash = game_hash.find {|(side, info_hash)| info_hash[:team_name] == team}
+  team_hash[1][:colors]
 end
 
 def team_names
