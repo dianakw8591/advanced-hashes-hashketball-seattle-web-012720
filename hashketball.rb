@@ -124,7 +124,8 @@ end
 
 def num_points_scored(player)
   #search for a player by name and return the number of points they scored
-  player_array.find
+  player_array.find do |player_hash| 
+    player_hash[:player_name] == player
   
 end
 
