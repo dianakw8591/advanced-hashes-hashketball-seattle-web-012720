@@ -118,12 +118,8 @@ def game_hash
   }
 end
 
-def create_player_array
-  game_hash.each do |(side, info_hash)|
-    info_hash[:players].map do |player_hash|
-      [player_hash]
-    end
-  end
+def player_array
+  game_hash[:home][:players] do |(side, info_hash)|
 end
 
 def num_points_scored(player)
