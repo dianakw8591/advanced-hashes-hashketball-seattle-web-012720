@@ -122,6 +122,12 @@ def player_array
   game_hash[:home][:players] + game_hash[:away][:players]
 end
 
+def side_hash(team)
+  #returns the hash of all team info by team name
+  side_array = game_hash.find {|(side, info_hash)| info_hash[:team_name] == team}
+  side_array[1]
+end
+
 def num_points_scored(player)
   #search for a player by name and return the number of points they scored
   player_array.find {|player_hash| player_hash[:player_name] == player}[:points]
@@ -143,11 +149,8 @@ def team_names
 end
 
 def player_numbers(team)
-  game_hash.each do |(side, info_hash)|
-    if info_hash[:team_name] == team
-      return info_hash[:players].map {|player_hash| player_hash[:number]}
-    end
-  end
+  #returns an array of the player numbers of the given team
+  
 end
       
 def player_stats(player)
