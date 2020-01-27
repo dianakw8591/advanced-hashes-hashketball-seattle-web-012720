@@ -149,7 +149,7 @@ end
 
 def player_numbers(team)
   #returns an array of the player numbers of the given team
-  side_hash(team)[:players].map {|player_hash| player_hash[:number]
+  side_hash(team)[:players].map {|player_hash| player_hash[:number]}
 end
       
 def player_stats(player)
