@@ -153,6 +153,7 @@ def player_numbers(team)
 end
       
 def player_stats(player)
+  #returns the stats for a given player
   player_array.find {|player_hash| player_hash[:player_name] == player}
 end
 
