@@ -119,11 +119,12 @@ def game_hash
 end
 
 def player_array
-  game_hash[:home][:players] do |(side, info_hash)|
+  game_hash[:home][:players] + game_hash[:away][:players]
 end
 
 def num_points_scored(player)
   #search for a player by name and return the number of points they scored
+  player_array.find
   
 end
 
