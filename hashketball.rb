@@ -172,7 +172,7 @@ def most_points_scored
 end
 
 def point_total(side)
-    game_hash[side][:players].reduce {|total, player_hash| total + player_hash[:points]}
+    game_hash[side][:players].reduce(0) {|total, player_hash| total + player_hash[:points]}
 end
 
 def winning_team
