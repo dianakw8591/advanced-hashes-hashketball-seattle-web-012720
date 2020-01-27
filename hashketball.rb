@@ -172,7 +172,7 @@ def most_points_scored
 end
 
 def point_total(side)
-  
+  game_hash.reduce 
 end
 
 def winning_team
