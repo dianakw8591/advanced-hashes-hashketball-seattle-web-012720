@@ -172,8 +172,7 @@ def most_points_scored
 end
 
 def point_total(side)
-  game_hash.each do {|(side, info_hash)|
-    info_hash[:players].reduce(nil) do |total, 
+    info_hash[side][:players].reduce {|total, player_hash| total + player_hash[:points]}
 end
 
 def winning_team
