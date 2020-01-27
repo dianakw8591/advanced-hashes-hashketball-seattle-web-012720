@@ -168,7 +168,7 @@ end
 
 def most_points_scored
   #return the player who scored the most points
-  
+  player_array.max_by {|player_hash| player_hash[:points]}[:player_name]
 end
 
 
