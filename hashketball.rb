@@ -153,7 +153,7 @@ def player_numbers(team)
 end
       
 def player_stats(player)
-  player_array.find {|player_hash| player_hash[:player_name == player]
+  player_array.find {|player_hash| player_hash[:player_name] == player}
 end
 
 def big_shoe_rebounds #find player with largest shoe size and return their rebounds
