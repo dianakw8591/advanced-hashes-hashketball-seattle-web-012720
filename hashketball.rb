@@ -188,7 +188,6 @@ end
 
 def long_name_steals_a_ton?
   #return true if the player with the longest name also had the most steals
-  player_array.max_by {|player_hash| player_hash[:steals]}[:player_name] 
-  #player_with_longest_name 
+  player_array.max_by {|player_hash| player_hash[:steals]}[:player_name] == player_with_longest_name 
 end
   
