@@ -133,7 +133,9 @@ def shoe_size(player)
 end
 
 def team_colors(team)
-  
+  #returns the team colors of a given team
+  game_hash.each do |(side, info_hash)|
+    info_hash[:team_colors]
 
 end
 
