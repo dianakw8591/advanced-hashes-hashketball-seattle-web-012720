@@ -177,7 +177,8 @@ end
 
 def winning_team
   #return the team that scored the most points
-  
+  winning_array = game_hash.max_by {|(side, info_hash)| point_total(side)}
+  winning_array[1][:team_name]
 end
 
 def player_with_longest_name
