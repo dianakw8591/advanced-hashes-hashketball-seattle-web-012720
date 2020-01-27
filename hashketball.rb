@@ -155,7 +155,7 @@ end
 def player_stats(player)
   #returns the stats for a given player
   hash = player_array.find {|player_hash| player_hash[:player_name] == player}
-  hash.delete
+  hash.delete :player_name
 end
 
 def big_shoe_rebounds #find player with largest shoe size and return their rebounds
