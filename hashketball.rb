@@ -161,7 +161,7 @@ end
 
 def big_shoe_rebounds 
   #find player with largest shoe size and return their rebounds
-  player_array.max
+  player_array.max_by {|player_hash| player_hash[:shoe]}[:rebounds]
 end
 
 #bonus
